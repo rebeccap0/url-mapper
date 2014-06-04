@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site Locator</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/urlMapper.css" rel="stylesheet">
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/urlMapper.js"></script>
+  </head>
+  <body>
+    <h2>Site Locator     <span class="small sub">Location, location, location</span></h2>
+    <p>Where should I go to visit my favorite website, personally?!</p>
+		<form id="locateForm" method="get" action="">
+ 			<div class="form-group">
+				<label for="curl">Domain of the website to locate</label>
+				<input id="curl" type="url" name="url" required class="input-md" placeholder="Type the URL here" value="http://">
+				<a href="#" class="help" id="url-help" title="Examples of valid domains are:
+'www.nytimes.com', 'nytimes.com',  'g1.com.br', 'www.g1.com.br'" data-placement="bottom" rel="tooltip"><img  class="help" src="images/q5.jpg"></a>
+			<button type="submit" class="btn btn-primary ">Locate in the world</button>
+			</div>
+			<div id="message" class="alert alert-danger">...
+				<span class="text"></span>
+			</div>
+		</form>
+		<div class="map">
+			<div id="map_canvas"></div>
+		</div>
+    	<script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
